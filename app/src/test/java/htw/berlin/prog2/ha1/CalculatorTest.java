@@ -111,13 +111,13 @@ class CalculatorTest {
         void testPositiveSubtraction () {       //Redtest
             Calculator calc = new Calculator();
 
-            calc.pressDigitKey(10);
+            calc.pressDigitKey(3);
             calc.pressBinaryOperationKey("-");
             calc.pressNegativeKey();
-            calc.pressDigitKey(5);
+            calc.pressDigitKey(3);
             calc.pressEqualsKey();
 
-            String expected = "15";
+            String expected = "6";
             String actual = calc.readScreen();
         }
 
