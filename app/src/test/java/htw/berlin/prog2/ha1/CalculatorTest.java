@@ -103,6 +103,22 @@ class CalculatorTest {
         String actual = calc.readScreen();
 
         assertEquals(expected, actual);
+
     }
+
+        @Test
+        @DisplayName("should display result after subtracting a positive and a negative number")
+        void testPositiveSubtraction () {       //Redtest
+            Calculator calc = new Calculator();
+
+            calc.pressDigitKey(10);
+            calc.pressBinaryOperationKey("-");
+            calc.pressNegativeKey();
+            calc.pressDigitKey(5);
+            calc.pressEqualsKey();
+
+            String expected = "15";
+            String actual = calc.readScreen();
+        }
 }
 
