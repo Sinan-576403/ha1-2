@@ -120,5 +120,24 @@ class CalculatorTest {
             String expected = "15";
             String actual = calc.readScreen();
         }
+
+        @Test
+        @DisplayName("should display result after multiplying a decimal number and a number")
+        void testDecimalNumbers() {            //Redtest Nr 2
+            Calculator calc = new Calculator();
+
+            calc.pressDigitKey(0);
+            calc.pressDotKey();
+            calc.pressDigitKey(7);
+            calc.pressBinaryOperationKey("x");
+            calc.pressDigitKey(2);
+            calc.pressEqualsKey();
+
+            String expected = "1.4";
+            String actual = calc.readScreen();
+
+            assertEquals(expected, actual);
+    }
+
 }
 
